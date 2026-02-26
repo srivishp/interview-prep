@@ -202,19 +202,20 @@ Success codes fall under the 2xx range, such as 200 OK, 201 Created, and 204 No 
 For a successful PATCH request, the server usually returns 200 OK if the updated resource is included in the response, or 204 No Content if no body is returned. Both codes indicate success, but 200 OK is preferred when the client needs confirmation of the changes. It is important to check that the appropriate HTTP status code is implemented.
 
 **What is the difference between PUT & PATCH methods?**
-The PUT method replaces the entire resource with the new data provided, while the PATCH method applies only partial modifications to the existing resource. 
 
-Purpose & Data: PUT updates the entire resource, requiring the full representation, whereas PATCH applies partial, incremental updates.
+The **PUT method replaces the entire resource** with the new data provided, while the **PATCH method applies only partial modifications** to the existing resource. 
 
-Idempotency: PUT is idempotent (multiple identical requests yield the same result), while PATCH is not inherently guaranteed to be.
+**Purpose & Data:** PUT updates the entire resource, requiring the full representation, whereas PATCH applies partial, incremental updates.
 
-Behavior: Missing fields in a PUT request may cause data to be overwritten or reset. PATCH only updates specified fields, leaving others untouched.
+**Idempotency:** PUT is idempotent (multiple identical requests yield the same result), while PATCH is not inherently guaranteed to be.
 
-Resource Handling: PUT can create a resource if the URI is known (upsert), while PATCH is generally for updating existing data. 
+**Behavior:** Missing fields in a PUT request may cause data to be overwritten or reset. PATCH only updates specified fields, leaving others untouched.
 
-Use **PUT** to completely replace a resource, ensure data consistency, or when the client holds the full state.
+**Resource Handling:** PUT can create a resource if the URI is known (upsert), while PATCH is generally for updating existing data. 
 
-Use **PATCH** for partial updates, saving bandwidth, or when only specific fields are known.
+Use PUT to completely replace a resource, ensure data consistency, or when the client holds the full state.
+
+Use PATCH for partial updates, saving bandwidth, or when only specific fields are known.
 
 
 **When should you use PUT & POST methods?**
@@ -627,6 +628,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

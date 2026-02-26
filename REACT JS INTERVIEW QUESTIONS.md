@@ -46,7 +46,7 @@ What are arrow functions and why are they used?
 
 &nbsp;       - componentWillUnmount()
 
-    **Functional Components**
+**Functional Components**
 
 &nbsp;       - useEffect() \& cleanup
 
@@ -213,4 +213,5 @@ GraphQL - Advantages \& Disadvantages
 GraphQL vs REST API
 
 Axios
+
 

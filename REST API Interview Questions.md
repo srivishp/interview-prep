@@ -76,16 +76,25 @@ An HTTP request is how a client communicates with a server in REST. It typically
 
 
 
-Request line: This includes the HTTP method (like GET, POST, PUT, DELETE), the URI (which identifies the resource, such as /users/123), and the HTTP version.
+**Endpoint (URL/URI):** An endpoint is the point of entry for the API, the address/URL/URI where the API is available. This resource is the one that the client wants to interact with.
 
+**HTTP Method (Verb):** Action that should be performed on the resource (GET, POST, PUT, DELETE, PATCH, etc.)
 
+**Headers:** Key/value pairs that provide metadata about the request and response. Common headers include:
 
-Headers: These are additional details that help the server understand the HTTP request, such as the format of the data (Content-Type: application/json), authentication info (Authorization: Bearer <token>), or caching rules.
+  **Content-Type:** The type of data being sent in the request.
+  
+  **Accept:** Indicates the desired media type of the response from the server.
+  
+  **Authorization:** It carries authentication details.
+  
+  **User-Agent:** Name of the client making the request.
+  
+**Body (Payload):** The sent data if any will accompany the request over here. Most probably used with the POST, PUT, and PATCH methods. Holds the actual data typically as a JSON object or XML.
 
+**Query Parameters:** Optional key-value pairs added to the URL after the ‘? for filtering, sorting or paginating results.
 
-
-Body: This is optional and only present in some HTTP requests (like POST or PUT). It carries the actual data the client wants to send, usually in JSON format, for example, { "name": "Alice" }.
-
+**Path Parameters:** A value embedded into the URL Path that refers to a specific resource.
 
 
 In simple terms, the HTTP request tells the server what resource you want, what you want to do with it, and any extra information needed to process it properly.
@@ -132,23 +141,15 @@ The core HTTP methods in REST are:
 
 
 
-GET: Fetch data
+**GET:** Retrieves data from the server. It’s a read-only operation and should be idempotent (multiple identical requests have the same effect as a single one).
 
+**POST:** Submits data to the server to create a new resource. It’s not idempotent (multiple identical POST requests can create multiple resources).
 
+**PUT:** Updates an existing resource or creates a new one if it doesn’t exist. It’s idempotent (repeated PUT requests will have the same effect). It typically replaces the entire resource.
 
-POST: Create new resources
+**PATCH:** Partially updates an existing resource. It’s not necessarily idempotent and only modifies the specified fields.
 
-
-
-PUT: Update or replace existing resources
-
-
-
-PATCH: Make partial updates
-
-
-
-DELETE: Remove resources
+**DELETE:** Removes a specified resource from the server. It’s idempotent.
 
 
 
@@ -603,5 +604,6 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 

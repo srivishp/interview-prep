@@ -1,4 +1,4 @@
-**Basic REST API interview questions**
+## Basic REST API interview questions
 
 **1. How do you define REST?**
 
@@ -238,7 +238,7 @@ When you move beyond the basics, the interviewers usually change their tactics a
 
 
 
-**Intermediate REST API interview questions**
+## Intermediate REST API interview questions
 
 **20. What are the constraints of REST architecture?**
 
@@ -603,4 +603,5 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 

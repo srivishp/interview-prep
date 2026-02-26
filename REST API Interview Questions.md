@@ -1,6 +1,6 @@
 ## Basic REST API interview questions
 
-**1. How do you define REST?**
+**How do you define REST?**
 
 REST is an architectural style used to design scalable and reliable web services or build distributed applications. Unlike protocols such as SOAP (Simple Object Access Protocol), it isn’t tied to a specific technology. Instead, it relies on standard HTTP methods like GET, POST, PUT, PATCH, and DELETE to interact with server resources.
 
@@ -14,17 +14,17 @@ In RESTful APIs, every resource requested is uniquely identified using a Uniform
 
 
 
-**2. What do the letters in REST stand for?**
+**What do the letters in REST stand for?**
 
 REST stands for:
 
 
 
-R (Representational): Refers to different formats like JSON or XML that represent a resource.
+**RE (Representational):** Refers to different formats like JSON or XML that represent a resource.
 
-S (State): Shows the resource’s data at a given time.
+**S (State):** Shows the resource’s data at a given time.
 
-T (Transfer): Reflects that the representation of the state is sent between the client and server over HTTP.
+**T (Transfer):** Reflects that the representation of the state is sent between the client and server over HTTP.
 
 
 
@@ -32,7 +32,7 @@ Each letter in the term describes how data is represented, managed, and transfer
 
 
 
-**3. What are REST APIs and why use them?**
+**What are REST APIs and why use them?**
 
 REST APIs are web services that follow REST principles, exposing resources via URI (Uniform Resource Identifier) and allowing clients (like browsers, mobile apps, or other servers) to interact with backend services using HTTP.
 
@@ -42,7 +42,7 @@ Most developers prefer it because they are simple, scalable, stateless, and lang
 
 
 
-**4. What is the difference between HTTP and REST?**
+**What is the difference between HTTP and REST?**
 
 HTTP is a protocol that governs the transmission of data between clients and servers on the web. It defines request methods like GET, POST, PUT, and DELETE, along with headers, response codes, and message structures.
 
@@ -56,7 +56,7 @@ For example, HTTP tells you that GET /users is a valid request method and URI, b
 
 
 
-**5. What does “resource” mean in REST API?**
+**What does “resource” mean in REST API?**
 
 According to the REST architectural pattern (Representational State Transfer), resources are the central building blocks of REST services. Examples of resources include users, products, or orders.
 
@@ -70,7 +70,7 @@ Resources are manipulated using standard HTTP methods. For example, GET retrieve
 
 
 
-**6. What is an HTTP request, and what are its key parts?**
+**What is an HTTP request, and what are its key parts?**
 
 An HTTP request is how a client communicates with a server in REST. It typically has three parts: a request line, headers, and an optional body. Together, these parts tell the server what resource is being requested and how to process it.
 
@@ -82,13 +82,13 @@ An HTTP request is how a client communicates with a server in REST. It typically
 
 **Headers:** Key/value pairs that provide metadata about the request and response. Common headers include:
 
-  **Content-Type:** The type of data being sent in the request.
+  -> **Content-Type:** The type of data being sent in the request.
   
-  **Accept:** Indicates the desired media type of the response from the server.
+  -> **Accept:** Indicates the desired media type of the response from the server.
   
-  **Authorization:** It carries authentication details.
+  -> **Authorization:** It carries authentication details.
   
-  **User-Agent:** Name of the client making the request.
+  -> **User-Agent:** Name of the client making the request.
   
 **Body (Payload):** The sent data if any will accompany the request over here. Most probably used with the POST, PUT, and PATCH methods. Holds the actual data typically as a JSON object or XML.
 
@@ -101,7 +101,7 @@ In simple terms, the HTTP request tells the server what resource you want, what 
 
 
 
-**7. What does an HTTP response consist of?**
+**What does an HTTP response consist of?**
 
 An HTTP response is the server's response sent back to the client after it makes an HTTP request. In RESTful web services, there are usually three main parts:
 
@@ -119,13 +119,13 @@ The final part is the response body, which holds the actual dynamic data being r
 
 
 
-**8. What is a URI in REST?**
+**What is a URI in REST?**
 
 URI stands for Uniform Resource Identifier; it uniquely identifies a resource in a REST API. It tells the client where the resource is located and how to access it. For example, /api/orders/45 might point to order #45.
 
 
 
-**9. What is the difference between query parameters and path parameters?**
+**What is the difference between query parameters and path parameters?**
 
 Path parameters are part of the resource path and used to identify specific resources, such as /users/123. Query parameters are appended after a "?" in the URI and majorly used for filtering, sorting, or pagination, such as /users?age=30\&sort=asc.
 
@@ -135,7 +135,7 @@ In short, path parameters identify “what” to fetch, while query parameters d
 
 
 
-**10. What are the standard or core HTTP methods in REST?**
+**What are the standard or core HTTP methods in REST?**
 
 The core HTTP methods in REST are:
 
@@ -157,13 +157,13 @@ These methods map directly to CRUD operations, making REST APIs easy to design a
 
 
 
-**11. What is statelessness in a REST API?**
+**What is statelessness in a REST API?**
 
 Statelessness means each client request must contain all necessary information for the server to process it, and the server does not store client session state. This makes REST APIs scalable, as servers don’t need to remember client context between requests.
 
 
 
-**12. What is the concept of idempotency?**
+**What is the concept of idempotency?**
 
 Idempotency refers to an operation that produces the same result no matter how many times it is repeated. This is an important REST API concept because it ensures reliability, consistency, and safety in distributed systems where network issues may cause clients to retry requests.
 
@@ -173,13 +173,13 @@ In REST, GET, PUT, and DELETE are idempotent HTTP methods. Even if a developer c
 
 
 
-**13. What is cross-origin resource sharing (CORS)?**
+**What is cross-origin resource sharing (CORS)?**
 
 CORS is a browser security mechanism that controls how resources in REST services are shared across different origins. By default, browsers block requests from one domain to another. Servers use response headers like Access-Control-Allow-Origin to specify which domains are allowed. CORS is essential when web clients consume APIs hosted on different domains.
 
 
 
-**14. What is the purpose of the HTTP status code?**
+**What is the purpose of the HTTP status code?**
 
 HTTP status codes communicate the outcome of a request. They indicate whether the request was successful, failed due to client error, or failed due to server error.
 
@@ -189,19 +189,33 @@ For example, 200 OK means success; if you receive 404 Not Found, it indicates a 
 
 
 
-**15. Which HTTP status codes indicate success vs. errors?**
+**Which HTTP status codes indicate success vs. errors?**
 
 Success codes fall under the 2xx range, such as 200 OK, 201 Created, and 204 No Content. Client errors fall under the 4xx range, like 400 Bad Request or 401 Unauthorized. Server errors are in the 5xx range, such as 500 Internal Server Error or 503 Service Unavailable. These categories help quickly classify responses.
 
 
 
-**16. Which HTTP status code fits a successful patch?**
+**Which HTTP status code fits a successful patch?**
 
 For a successful PATCH request, the server usually returns 200 OK if the updated resource is included in the response, or 204 No Content if no body is returned. Both codes indicate success, but 200 OK is preferred when the client needs confirmation of the changes. It is important to check that the appropriate HTTP status code is implemented.
 
+**What is the difference between PUT & PATCH methods?**
+The PUT method replaces the entire resource with the new data provided, while the PATCH method applies only partial modifications to the existing resource. 
+
+Purpose & Data: PUT updates the entire resource, requiring the full representation, whereas PATCH applies partial, incremental updates.
+
+Idempotency: PUT is idempotent (multiple identical requests yield the same result), while PATCH is not inherently guaranteed to be.
+
+Behavior: Missing fields in a PUT request may cause data to be overwritten or reset. PATCH only updates specified fields, leaving others untouched.
+
+Resource Handling: PUT can create a resource if the URI is known (upsert), while PATCH is generally for updating existing data. 
+
+Use **PUT** to completely replace a resource, ensure data consistency, or when the client holds the full state.
+
+Use **PATCH** for partial updates, saving bandwidth, or when only specific fields are known.
 
 
-**17. When should you use put vs. post?**
+**When should you use PUT & POST methods?**
 
 The choice between PUT and POST in RESTful APIs depends on how you want to handle the request data and the resource being targeted. The PUT is idempotent, which means that sending the same request multiple times will always result in the same state of the resource.
 
@@ -223,13 +237,13 @@ Organizations can even implement their own security measures, like validating us
 
 
 
-**18. How does HTTP basic authentication work?**
+**How does HTTP basic authentication work?**
 
 In HTTP basic authentication, the client sends credentials in the Authorization header as a Base64-encoded string in the format username:password. The server decodes and validates them. Since credentials are easily decodable, Basic Auth should always be used over HTTPS to ensure they are transmitted securely.
 
 
 
-**19. What is the purpose of TLS for APIs?**
+**What is the purpose of TLS for APIs?**
 
 TLS (Transport Layer Security) ensures secure communication between client and server by encrypting the data exchanged. This prevents eavesdropping and tampering. For REST APIs, TLS is critical because sensitive data like authentication tokens or user details often travels over the network. Hence, it is best to always prefer HTTPS over plain HTTP.
 
@@ -241,7 +255,7 @@ When you move beyond the basics, the interviewers usually change their tactics a
 
 ## Intermediate REST API interview questions
 
-**20. What are the constraints of REST architecture?**
+**What are the constraints of REST architecture?**
 
 There are six specific architectural constraints of REST architecture:
 
@@ -295,7 +309,7 @@ Sometimes the server may send executable code (like JavaScript) for the client t
 
 
 
-**21. How do you handle versioning in RESTful APIs?**
+**How do you handle versioning in RESTful APIs?**
 
 API versioning is necessary because APIs evolve over time. Without versioning, existing clients may break when changes are introduced, i.e., new fields are added or old endpoints are replaced. The common strategies are:
 
@@ -313,7 +327,7 @@ Query parameters: Append version to query string, e.g., /users?version=2. This i
 
 
 
-**22. How do you maintain backward compatibility in REST APIs?**
+**How do you maintain backward compatibility in REST APIs?**
 
 Backward compatibility means old clients should continue working even when the API evolves. You can use the following strategies to maintain backward compatibility in REST APIs:
 
@@ -339,9 +353,9 @@ For example, if your /users API adds a new phoneNumber field, don’t remove exi
 
 
 
-**23. What is HATEOAS?**
+**What is HATEOAS?**
 
-HATEOAS stands for Hypermedia as the Engine of Application State and is part of the uniform interface constraint in REST architecture. It is one of the key, yet often overlooked, constraints of the REST architecture. In simple terms, it means that a REST server should provide not only the requested resource but also hyperlinks (or hypermedia controls) in the HTTP response that guide the client about possible next actions.
+HATEOAS stands for **Hypermedia as the Engine of Application State** and is part of the uniform interface constraint in REST architecture. It is one of the key, yet often overlooked, constraints of the REST architecture. In simple terms, it means that a REST server should provide not only the requested resource but also hyperlinks (or hypermedia controls) in the HTTP response that guide the client about possible next actions.
 
 
 
@@ -353,7 +367,7 @@ The real benefit of HATEOAS is decoupling. Existing clients don’t need to know
 
 
 
-**24. Which HTTP methods are safe vs. idempotent?**
+**Which HTTP methods are safe vs. idempotent?**
 
 In REST, safe methods don’t modify server state. These include GET, HEAD, and OPTIONS. For example, GET /users only retrieves data; it does not change anything. Because it always returns the same result without side effects, GET is also idempotent.
 
@@ -367,29 +381,38 @@ For instance, DELETE /users/5 deletes the user once, and calling it again has no
 
 
 
-**25. How do you choose appropriate HTTP status codes?**
+**What are the different HTTP status codes?**
 
-Developers must follow the simple guidelines when choosing a status code.
+The different HTTP status codes are as follows:
+
+**2xx (Success)**
+
+ -> **200 OK:** The request was successful.
+ 
+ -> **201 Created:** A new resource was successfully created (typically for POST requests).
+ 
+ -> **204 No Content:** The request was successful, but there’s no content to return (e.g., a successful DELETE).
+ 
+**4xx (Client Error)**
+
+ -> **400 Bad Request:** The server cannot process the request due to malformed syntax or invalid data.
+ 
+ -> **401 Unauthorized:** Authentication is required or has failed.
+
+ -> **403 Forbidden:** The client does not have permission to access the resource.
+ 
+ -> **404 Not Found:** The requested resource does not exist on the server.
+ 
+**5xx (Server Error)**
+
+ -> **500 Internal Server Error:** A generic error occurred on the server.
+ 
+ -> **502 Bad Gateway:** The server, while acting as a gateway or proxy, received an invalid response from an upstream server.
+ 
+ -> **503 Service Unavailable:** The server is unable to handle the request due to temporary overload or maintenance.
 
 
-
-2xx success codes: Use 200 OK for successful GET, 201 Created when a resource is added, and 204 No Content when an update or delete succeeds without returning data.
-
-
-
-4xx client errors: Use 400 Bad Request for invalid input, 401 Unauthorized for missing authentication, 403 Forbidden for insufficient permissions, and 404 Not Found for missing resources.
-
-
-
-5xx server errors: Use 500 Internal Server Error for generic failures or 503 Service Unavailable when a service is down.
-
-
-
-For example, if a client sends an invalid email in a signup API, return 400 Bad Request, not 500, since it’s the client’s fault.
-
-
-
-**26. How does the cache-control header work with ETags?**
+**How does the cache-control header work with ETags?**
 
 Caching is important for performance. The Cache-Control header tells clients how long they can reuse a response. For example, Cache-Control: max-age=3600 means the response is valid for one hour.
 
@@ -403,7 +426,7 @@ Together, Cache-Control headers and ETags reduce server load and speed up respon
 
 
 
-**27. How does pagination work in REST APIs?**
+**What is pagination & how does it work in REST APIs?**
 
 Pagination helps handle large datasets by splitting results into smaller chunks. Instead of returning thousands of records at once, APIs return a subset and let clients request more.
 
@@ -413,19 +436,19 @@ Common methods include:
 
 
 
-Page \& limit: /users?page=2\&limit=20 → returns 20 users on page 2
+**Page \& limit:** /users?page=2\&limit=20 → returns 20 users on page 2
 
 
 
-Offset \& limit: /users?offset=40\&limit=20 → skips 40 users, then returns the next 20
+**Offset \& limit:** /users?offset=40\&limit=20 → skips 40 users, then returns the next 20
 
 
 
-Cursor-based: returns a “next” cursor token with each response, used to fetch subsequent results
+**Cursor-based:** returns a “next” cursor token with each response, used to fetch subsequent results
 
 
 
-**28. How do you handle multiple identical requests safely?**
+**How do you handle multiple identical requests safely?**
 
 Duplicate requests are common, especially in unreliable networks where clients retry operations. To prevent duplicate resource creation, APIs use idempotency keys.
 
@@ -435,7 +458,7 @@ For example, when creating a payment, the client includes a unique key like Idem
 
 
 
-**29. What is content negotiation, and how does it work?**
+**What is content negotiation, and how does it work?**
 
 Content negotiation allows a client to tell the server what data format it prefers. This is usually done using the Accept header.
 
@@ -457,7 +480,7 @@ The server decides which representation to return based on the request. If it ca
 
 
 
-**30. How does REST compare to GraphQL and gRPC?**
+**How does REST compare to GraphQL and gRPC?**
 
 REST is resource-based, widely adopted, and simple to use with HTTP. However, it may lead to over-fetching or under-fetching data.
 
@@ -471,7 +494,7 @@ gRPC is a high-performance, binary protocol based on HTTP/2. It supports streami
 
 
 
-**31. What is the difference between REST and SOAP protocols?**
+**What is the difference between REST and SOAP protocols?**
 
 REST is lightweight, flexible, and usually uses JSON over HTTP. It’s easy to use and widely adopted in modern web applications.
 
@@ -481,7 +504,7 @@ SOAP (Simple Object Access Protocol) is more rigid, relies on XML, and requires 
 
 
 
-**32. How do you enforce TLS for REST APIs?**
+**How do you enforce TLS for REST APIs?**
 
 TLS ensures all data is encrypted between the client and the server. To enforce it:
 
@@ -503,7 +526,7 @@ In addition, use strong TLS versions (e.g., TLS 1.2 or higher), rotate certifica
 
 
 
-**33. What are the key aspects to consider when implementing RESTful web services?**
+**What are the key aspects to consider when implementing RESTful web services?**
 
 When building REST APIs, make them simple and reliable. Use clear and consistent paths (URIs) for your resources and match each HTTP method to the correct action, i.e, (GET to read, POST to add). Keep the API stateless so each request is standalone.
 
@@ -513,29 +536,29 @@ Key practices to follow are:
 
 
 
-Security: Implement login or token checks to protect resources.
+**Security:** Implement login or token checks to protect resources.
 
 
 
-Performance: Use caching to speed up responses.
+**Performance:** Use caching to speed up responses.
 
 
 
-Handling large data: Apply pagination to avoid sending too much data at once.
+**Handling large data:** Apply pagination to avoid sending too much data at once.
 
 
 
-Server stability: Set limits or monitoring to prevent overload.
+**Server stability:** Set limits or monitoring to prevent overload.
 
 
 
-**34. What core REST API concepts should everyone know?**
+**What core REST API concepts should everyone know?**
 
 Everyone working with REST should know how resources are identified with URIs and how to use the main HTTP methods (GET, POST, PUT, DELETE, PATCH) on them. It is also important to understand the status codes and idempotency, statelessness and authentication. Other key ideas include caching to improve speed, pagination for large data sets, and common security measures like using HTTPS (TLS) and handling cross-origin requests (CORS).
 
 
 
-**35. How do you implement webhooks in RESTful web services?**
+**How do you implement webhooks in RESTful web services?**
 
 Webhooks enable servers to notify clients of events, eliminating the need for clients to constantly poll. To implement, the client registers a callback URL with the API provider.
 
@@ -549,13 +572,13 @@ For example, Stripe uses webhooks to notify your system about payment events.
 
 
 
-**36. What are the differences between JSON and XML in RESTful web services?**
+**What are the differences between JSON and XML in RESTful web services?**
 
 In RESTful web services, the two most common data formats for request and response bodies are JSON (JavaScript Object Notation) and XML (eXtensible Markup Language). Both serve the same purpose, i.e., structuring data, but they differ in style and use cases.
 
 
 
-JSON is lightweight, less verbose, and very close to how data structures are represented in most programming languages, especially JavaScript. It uses key-value pairs, arrays, and objects, which makes it faster to parse and easier for developers to work with. Because of its simplicity and efficiency, JSON has become the default choice for most modern REST APIs. For example, { "id": 1, "name": "Alice" }.
+JSON is lightweight, less verbose, and very close to how data structures are represented in most programming languages, especially JavaScript. It uses key-value pairs, arrays, and objects, which makes it faster to parse and easier for developers to work with. Because of its simplicity and efficiency, JSON has become the default choice for most modern REST APIs. For example: ```{ "id": 1, "name": "Alice" }```
 
 
 
@@ -563,21 +586,19 @@ XML, on the other hand, is more verbose and uses opening/closing tags, which inc
 
 
 
-xml
-
-
-
+```
 <user id="1"> 
 
 <name>Alice</name> 
 
 </user>
+```
 
 JSON is preferred mostly for performance and readability, but XML is still valuable in enterprise systems or when schema validation and document-like structures are required.
 
 
 
-**37. What is the difference between Swagger and OpenAPI?**
+**What is the difference between Swagger and OpenAPI?**
 
 The terms Swagger and OpenAPI are closely related. The key point is that OpenAPI is the specification, while Swagger is a set of tools that help you use that specification.
 
@@ -604,6 +625,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

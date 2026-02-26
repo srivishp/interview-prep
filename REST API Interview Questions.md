@@ -127,7 +127,9 @@ URI stands for Uniform Resource Identifier; it uniquely identifies a resource in
 
 **What is the difference between query parameters and path parameters?**
 
-Path parameters are part of the resource path and used to identify specific resources, such as /users/123. Query parameters are appended after a "?" in the URI and majorly used for filtering, sorting, or pagination, such as /users?age=30\&sort=asc.
+**Path parameters:** They are part of the resource path and used to identify specific resources, such as ```/users/123```. 
+
+**Query parameters:** They are appended after a ```?``` in the URI and majorly used for filtering, sorting, or pagination, such as ```/users?age=30\&sort=asc```.
 
 
 
@@ -625,6 +627,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

@@ -1,4 +1,4 @@
-**BASIC  GRAPHQL**
+## BASIC  GRAPHQL
 
 You might be asked these questions if you’re applying for a role as a frontend developer, web or mobile app developer, product manager, or UI/UX designer at an API-first company.
 
@@ -52,7 +52,7 @@ The key concepts of the GraphQL query language revolve around its schema-driven 
 
 
 
-**INTERMEDIATE GRAPHQL**
+## INTERMEDIATE GRAPHQL
 
 You might be asked these questions if you’re applying for a role as a backend developer, DevOps engineer, technical product manager, or solutions architect.
 
@@ -106,7 +106,7 @@ GraphQL developers can successfully implement API versioning by using the schema
 
 
 
-**ADVANCED GRAPHQL**
+## ADVANCED GRAPHQL
 
 If you’re applying for a role as a GraphQL developer, senior full-stack developer, API architect, or performance engineer, you might be asked some of the more in-depth questions in this section.
 
@@ -157,4 +157,5 @@ A serverless GraphQL architecture eliminates the requirement for a dedicated, co
 **How can you implement real-time updates in GraphQL using subscriptions?**
 
 The subscriptions feature in GraphQL enables clients to receive real-time data from the server over a persistent connection, usually through WebSockets, which is useful for implementing real-time updates. When a client subscribes to a specific event, the GraphQL server pushes updates to the client as the relevant data changes, keeping the client in sync. This is especially useful for features such as live chats, real-time notifications, or any scenario in which data must be updated in real time on the client side.
+
 

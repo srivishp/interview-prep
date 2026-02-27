@@ -2,7 +2,7 @@
 
 ### How do you define REST?
 
-REST is an architectural style used to design scalable and reliable web services or build distributed applications. Unlike protocols such as SOAP (Simple Object Access Protocol), it isn’t tied to a specific technology. Instead, it relies on standard HTTP methods like GET, POST, PUT, PATCH, and DELETE to interact with server resources.
+REST is an architectural style used to design scalable and reliable web services or build distributed applications. Unlike protocols such as SOAP (Simple Object Access Protocol), it isn’t tied to a specific technology. Instead, it relies on standard HTTP methods like ```GET```, ```POST```, ```PUT```, ```PATCH```, and ```DELETE``` to interact with server resources.
 
 
 
@@ -44,7 +44,7 @@ Most developers prefer it because they are simple, scalable, stateless, and lang
 
 ### What is the difference between HTTP and REST?
 
-HTTP is a protocol that governs the transmission of data between clients and servers on the web. It defines request methods like GET, POST, PUT, and DELETE, along with headers, response codes, and message structures.
+HTTP is a protocol that governs the transmission of data between clients and servers on the web. It defines request methods like ```GET```, ```POST```, ```PUT```, and ```DELETE```, along with headers, response codes, and message structures.
 
 
 
@@ -52,7 +52,7 @@ REST, on the other hand, is an architectural style for designing APIs that lever
 
 
 
-For example, HTTP tells you that GET /users is a valid request method and URI, but REST defines how to use that request to represent the retrieval of a “users” resource.
+For example, HTTP tells you that ```GET /users``` is a valid request method and URI, but REST defines how to use that request to represent the retrieval of a “users” resource.
 
 
 
@@ -78,7 +78,7 @@ An HTTP request is how a client communicates with a server in REST. It typically
 
 **Endpoint (URL/URI):** An endpoint is the point of entry for the API, the address/URL/URI where the API is available. This resource is the one that the client wants to interact with.
 
-**HTTP Method (Verb):** Action that should be performed on the resource (GET, POST, PUT, DELETE, PATCH, etc.)
+**HTTP Method (Verb):** Action that should be performed on the resource (```GET```, ```POST```, ```PUT```, ```DELETE```, ```PATCH```, etc.)
 
 **Headers:** Key/value pairs that provide metadata about the request and response. Common headers include:
 
@@ -90,7 +90,7 @@ An HTTP request is how a client communicates with a server in REST. It typically
   
   -> **User-Agent:** Name of the client making the request.
   
-**Body (Payload):** The sent data if any will accompany the request over here. Most probably used with the POST, PUT, and PATCH methods. Holds the actual data typically as a JSON object or XML.
+**Body (Payload):** The sent data if any will accompany the request over here. Mostly used with the ```POST```, ```PUT```, and ```PATCH``` methods. Holds the actual data typically as a JSON object or XML.
 
 **Query Parameters:** Optional key-value pairs added to the URL after the ‘? for filtering, sorting or paginating results.
 
@@ -115,13 +115,13 @@ The second part is the response headers, which contain metadata about the respon
 
 
 
-The final part is the response body, which holds the actual dynamic data being returned, commonly in JSON format. For instance, when retrieving user information, the body might return { "id": 1, "name": "Alice" }.
+The final part is the response body, which holds the actual dynamic data being returned, commonly in JSON format. For instance, when retrieving user information, the body might return ```{ "id": 1, "name": "Alice" }```.
 
 
 
 ### What is a URI in REST?
 
-URI stands for Uniform Resource Identifier; it uniquely identifies a resource in a REST API. It tells the client where the resource is located and how to access it. For example, /api/orders/45 might point to order #45.
+URI stands for Uniform Resource Identifier; it uniquely identifies a resource in a REST API. It tells the client where the resource is located and how to access it. For example, ```/api/orders/45``` might point to order #45.
 
 
 
@@ -133,7 +133,7 @@ URI stands for Uniform Resource Identifier; it uniquely identifies a resource in
 
 
 
-In short, path parameters identify “what” to fetch, while query parameters define “how” to fetch it.
+In short, path parameters identify *what* to fetch, while query parameters define *how* to fetch it.
 
 
 
@@ -177,7 +177,7 @@ In REST APIs, GET, PUT, and DELETE are idempotent HTTP methods. Even if a develo
 
 ### What is cross-origin resource sharing (CORS)?
 
-CORS is a browser security mechanism that controls how resources in REST services are shared across different origins. By default, browsers block requests from one domain to another. Servers use response headers like Access-Control-Allow-Origin to specify which domains are allowed. CORS is essential when web clients consume APIs hosted on different domains.
+CORS is a browser security mechanism that controls how resources in REST services are shared across different origins. By default, browsers block requests from one domain to another. Servers use response headers like ```Access-Control-Allow-Origin``` to specify which domains are allowed. CORS is essential when web clients consume APIs hosted on different domains.
 
 
 
@@ -199,36 +199,37 @@ Success codes fall under the 2xx range, such as 200 OK, 201 Created, and 204 No 
 
 ### Which HTTP status code fits a successful patch?
 
-For a successful PATCH request, the server usually returns 200 OK if the updated resource is included in the response, or 204 No Content if no body is returned. Both codes indicate success, but 200 OK is preferred when the client needs confirmation of the changes. It is important to check that the appropriate HTTP status code is implemented.
+For a successful ```PATCH``` request, the server usually returns 200 OK if the updated resource is included in the response, or 204 No Content if no body is returned. Both codes indicate success, but 200 OK is preferred when the client needs confirmation of the changes. It is important to check that the appropriate HTTP status code is implemented.
+
 
 ### What is the difference between PUT & PATCH methods?
 
 The **PUT method replaces the entire resource** with the new data provided, while the **PATCH method applies only partial modifications** to the existing resource. 
 
-**Purpose & Data:** PUT updates the entire resource, requiring the full representation, whereas PATCH applies partial, incremental updates.
+**Purpose & Data:** ```PUT``` updates the entire resource, requiring the full representation, whereas ```PATCH``` applies partial, incremental updates.
 
-**Idempotency:** PUT is idempotent (multiple identical requests yield the same result), while PATCH is not inherently guaranteed to be.
+**Idempotency:** ```PUT``` is idempotent (multiple identical requests yield the same result), while ```PATCH``` is not inherently guaranteed to be.
 
-**Behavior:** Missing fields in a PUT request may cause data to be overwritten or reset. PATCH only updates specified fields, leaving others untouched.
+**Behavior:** Missing fields in a ```PUT``` request may cause data to be overwritten or reset. ```PATCH``` only updates specified fields, leaving others untouched.
 
-**Resource Handling:** PUT can create a resource if the URI is known (upsert), while PATCH is generally for updating existing data. 
+**Resource Handling:** ```PUT``` can create a resource if the URI is known (upsert), while ```PATCH``` is generally for updating existing data. 
 
-Use PUT to completely replace a resource, ensure data consistency, or when the client holds the full state.
+Use ```PUT``` to completely replace a resource, ensure data consistency, or when the client holds the full state.
 
-Use PATCH for partial updates, saving bandwidth, or when only specific fields are known.
+Use ```PATCH``` for partial updates, saving bandwidth, or when only specific fields are known.
 
 
 ### When should you use PUT & POST methods?
 
-The choice between PUT and POST in RESTful APIs depends on how you want to handle the request data and the resource being targeted. The PUT is idempotent, which means that sending the same request multiple times will always result in the same state of the resource.
+The choice between ```PUT``` and ```POST``` in RESTful APIs depends on how you want to handle the request data and the resource being targeted. The ```PUT``` is idempotent, which means that sending the same request multiple times will always result in the same state of the resource.
 
 
 
-For example, a PUT /users/123 with updated user details will replace or update that specific user. Even if the same request is sent again, the server processes it without creating duplicates.
+For example, a ```PUT /users/123``` with updated user details will replace or update that specific user. Even if the same request is sent again, the server processes it without creating duplicates.
 
 
 
-On the other hand, POST is not idempotent. It is used to create new resources, often at a collection endpoint like POST /users. Every call creates a new entry, even if the request body contains the same request data. That’s why POST methods are best for operations where you expect a new identifier (like id) to be generated.
+On the other hand, ```POST``` is not idempotent. It is used to create new resources, often at a collection endpoint like ```POST /users```. Every call creates a new entry, even if the request body contains the same request data. That’s why ```POST``` methods are best for operations where you expect a new identifier (like id) to be generated.
 
 
 
@@ -318,15 +319,15 @@ API versioning is necessary because APIs evolve over time. Without versioning, e
 
 
 
-URI versioning: Include the version in the path, e.g., /api/v1/users. This is simple and widely used.
+**URI versioning:** Include the version in the path, e.g., ```/api/v1/users```. This is simple and widely used.
 
 
 
-Header versioning: Specify the version in request headers, e.g., Accept: application/vnd.myapp.v2+json. This keeps the URI clean but requires more client configuration.
+**Header versioning:** Specify the version in request headers, e.g., ```Accept: application/vnd.myapp.v2+json```. This keeps the URI clean but requires more client configuration.
 
 
 
-Query parameters: Append version to query string, e.g., /users?version=2. This is less common but sometimes used for quick testing.
+**Query parameters:** Append version to query string, e.g., ```/users?version=2```. This is less common but sometimes used for quick testing.
 
 
 
@@ -336,7 +337,7 @@ Backward compatibility means old clients should continue working even when the A
 
 
 
-Keep old versions alive while introducing new ones (e.g., /v1/ and /v2/).
+Keep old versions alive while introducing new ones (e.g., ```/v1/``` and ```/v2/```).
 
 
 
@@ -352,7 +353,7 @@ When adding new required fields, provide defaults so older clients don’t fail.
 
 
 
-For example, if your /users API adds a new phoneNumber field, don’t remove existing email or name fields. Just add the new field in the response so older clients can ignore it.
+For example, if your ```/users``` API adds a new phoneNumber field, don’t remove existing email or name fields. Just add the new field in the response so older clients can ignore it.
 
 
 
@@ -380,7 +381,7 @@ Idempotent methods produce the same result no matter how many times you call the
 
 
 
-For instance, DELETE /users/5 deletes the user once, and calling it again has no further effect. POST is neither safe nor idempotent; it always creates a new resource. Distinguishing safe vs. idempotent helps interviewers see if you understand reliability in REST design.
+For instance, ```DELETE /users/5``` deletes the user once, and calling it again has no further effect. POST is neither safe nor idempotent; it always creates a new resource. Distinguishing safe vs. idempotent helps interviewers see if you understand reliability in REST design.
 
 
 
@@ -435,15 +436,15 @@ Pagination helps handle large datasets by splitting results into smaller chunks.
 
 
 
-**Page \& limit:** /users?page=2\&limit=20 → returns 20 users on page 2
+**Page \& limit:** ```/users?page=2\&limit=20``` → returns 20 users on page 2
 
 
 
-**Offset \& limit:** /users?offset=40\&limit=20 → skips 40 users, then returns the next 20
+**Offset \& limit:** ```/users?offset=40\&limit=20``` → skips 40 users, then returns the next 20
 
 
 
-**Cursor-based:** returns a “next” cursor token with each response, used to fetch subsequent results
+**Cursor-based:** returns a ```next``` cursor token with each response, used to fetch subsequent results
 
 
 
@@ -629,6 +630,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

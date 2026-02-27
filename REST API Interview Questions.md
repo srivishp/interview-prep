@@ -70,7 +70,7 @@ Resources are manipulated using standard HTTP methods. For example, GET retrieve
 
 
 
-## What is an HTTP request, and what are its key parts?
+### What is an HTTP request, and what are its key parts?
 
 An HTTP request is how a client communicates with a server in REST. It typically has three parts: a request line, headers, and an optional body. Together, these parts tell the server what resource is being requested and how to process it.
 
@@ -623,6 +623,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

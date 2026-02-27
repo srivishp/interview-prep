@@ -465,12 +465,9 @@ Content negotiation allows a client to tell the server what data format it prefe
 
 
 ```
-
-
 Accept: application/json: server responds in JSON. 
 
 Accept: application/xml: server responds in XML.
-
 ``` 
 
 The server decides which representation to return based on the request. If it can’t provide the requested format, it may return 406 Not Acceptable.
@@ -629,6 +626,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

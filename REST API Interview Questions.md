@@ -575,7 +575,13 @@ In RESTful web services, the two most common data formats for request and respon
 
 
 
-JSON is lightweight, less verbose, and very close to how data structures are represented in most programming languages, especially JavaScript. It uses key-value pairs, arrays, and objects, which makes it faster to parse and easier for developers to work with. Because of its simplicity and efficiency, JSON has become the default choice for most modern REST APIs. For example: ```{ "id": 1, "name": "Alice" }```
+JSON is lightweight, less verbose, and very close to how data structures are represented in most programming languages, especially JavaScript. It uses key-value pairs, arrays, and objects, which makes it faster to parse and easier for developers to work with. Because of its simplicity and efficiency, JSON has become the default choice for most modern REST APIs. For example: 
+
+```js
+
+{ "id": 1, "name": "Alice" }
+
+```
 
 
 
@@ -623,6 +629,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 

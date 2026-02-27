@@ -460,12 +460,11 @@ For example, when creating a payment, the client includes a unique key like Idem
 
 ### What is content negotiation, and how does it work?
 
-Content negotiation allows a client to tell the server what data format it prefers. This is usually done using the Accept header. For example:
+Content negotiation allows a client to tell the server what data format it prefers. This is usually done using the ```Accept``` header. For example:
 
 
 
-```js
-
+```
 
 
 Accept: application/json: server responds in JSON. 
@@ -630,6 +629,7 @@ Swagger Codegen to generate server stubs or client SDKs.
 
 
 In short, OpenAPI is the specification (the rules and format), and Swagger is the toolset that implements and works with that specification.
+
 
 
 
